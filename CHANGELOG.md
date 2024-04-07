@@ -1,5 +1,8 @@
 # Changes
 
+* v0.7.next in progress
+  * Update default Clojure version in generated projects to 1.11.2; update various other dependencies too.
+
 * v0.7.0 58f2c19 -- 2024-01-13
   * Address [#55](https://github.com/seancorfield/deps-new/issues/55) by adding support for compound template names that can be resolved to git repositories and template paths within them.
 
