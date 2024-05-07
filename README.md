@@ -1,6 +1,6 @@
-# deps-new [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/seancorfield/deps-new) [![Slack](https://img.shields.io/badge/slack-deps--new-yellow.svg?logo=slack)](https://clojurians.slack.com/app_redirect?channel=deps-new)
+# deps-new [![Slack](https://img.shields.io/badge/slack-deps--new-yellow.svg?logo=slack)](https://clojurians.slack.com/app_redirect?channel=deps-new)
 
-A new, simpler alternative to `clj-new`.
+Create new projects for use with the Clojure CLI and `deps.edn`.
 
 Intended to be installed as a "tool" (Clojure CLI 1.11.1.1149 or later).
 
