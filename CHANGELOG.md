@@ -1,5 +1,8 @@
 # Changes
 
+* v0.7.next in progress
+  * Update testing deps.
+
 * v0.7.1 c1e42aa -- 2024-05-07
   * Update default Clojure version in generated projects to 1.11.3; update various other dependencies too.
 
