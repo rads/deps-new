@@ -185,6 +185,26 @@ that controlled the inclusion of optional features in the generated project.
 The post process function could programmatically modify files within the
 generated project, such as reading, updating, and rewriting EDN files.
 
+Here's an example of `:post-process-fn` that runs the tests in a freshly-generated project:
+
+```clojure
+(defn post-process-fn [edn data]
+  (let [basis (b/create-basis {:dir (:target-dir data) :aliases [:test]})
+        cmds  (b/java-command {:basis     basis
+                               :main      'clojure.main
+                               :main-args ["-m" "cognitect.test-runner"]})
+        {:keys [exit]}
+        (b/process (assoc cmds :dir (:target-dir data)))]
+    (println "Post-processing" edn "with" data "produced" exit)))
+```
+
+Both the `b/create-basis` and `b/process` calls need the `:dir` option, so that
+the basis is created from the new project's `deps.edn` and the tests are run
+in that directory. The `:aliases` option is used to add the `:test` alias from
+the new project's `deps.edn` file to the basis. `:main` specifies `clojure.main`
+since we want to mimic running `clojure -M`. `:main-args` specifies the command-line
+arguments to provide to `clojure -M` (in this case).
+
 ## Additional Documentation
 
 Practical.li has an excellent

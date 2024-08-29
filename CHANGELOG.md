@@ -1,6 +1,7 @@
 # Changes
 
 * v0.7.next in progress
+  * Add example of `:post-process-fn` to documentation.
   * Update testing deps.
 
 * v0.7.1 c1e42aa -- 2024-05-07
