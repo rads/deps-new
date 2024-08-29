@@ -2,7 +2,7 @@
 
 * v0.7.next in progress
   * Add example of `:post-process-fn` to documentation.
-  * Update testing deps.
+  * Update dev/test/build deps (Clojure to 1.11.4, `tools.build` to 0.10.5).
 
 * v0.7.1 c1e42aa -- 2024-05-07
   * Update default Clojure version in generated projects to 1.11.3; update various other dependencies too.
