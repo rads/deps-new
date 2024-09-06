@@ -1,6 +1,6 @@
 # Changes
 
-* v0.8.0 -- 2024-09-05
+* v0.8.0 2f96530 -- 2024-09-05
   * Add example of `:post-process-fn` to documentation.
   * Update default Clojure version in generated projects to 1.12.0.
   * Update dev/test/build deps (Clojure to 1.12.0, `tools.build` to 0.10.5).
