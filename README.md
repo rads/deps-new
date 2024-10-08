@@ -276,7 +276,7 @@ Practical.li also has an excellent
 
 The following templates are available externally. If you have written a template and would like to add it to the list, please make a PR.
 
-- [avil-template](https://github.com/codesmith-gmbh/anvil-template) - A template for projects using anvil and blocks
+- [anvil-template](https://github.com/codesmith-gmbh/anvil-template) - A template for projects using anvil and blocks
 - [clerk-utils](https://github.com/mentat-collective/clerk-utils/tree/main/resources/clerk_utils/custom) - Create a fully-configured Clerk notebook project
 - [Clojure Live Reload HTML Server Template](https://github.com/AdamFrey/clojure-html-server-live-reload-template)
 - [deps-new-lib-adoc-template](https://github.com/KingMob/deps-new-lib-adoc-template) - The default `lib` template, but using AsciiDoc
