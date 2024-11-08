@@ -6,8 +6,7 @@
             [clojure.string :as str]
             [clojure.tools.deps.extensions.git :as git]
             [clojure.tools.build.api :as b]
-            [clojure.tools.gitlibs :as gl]
-            [org.corfield.new.impl :as impl])
+            [clojure.tools.gitlibs :as gl])
   (:import (java.nio.file Files)
            (java.nio.file.attribute FileAttribute)
            (java.text SimpleDateFormat)
@@ -78,8 +77,8 @@
 
 (comment
   (get-git-sha 'io.github.seancorfield/deps-new nil)
-  (get-git-sha 'org.corfield.new/app nil)
-  )
+  (get-git-sha 'org.corfield.new/app nil))
+  
 
 (defn ->subst-map
   "Given a hash map of substitution data, return a hash map of
@@ -120,8 +119,8 @@
              data))
 
 (comment
-  (adjust-subst-map (->subst-map {:a 1 :b "two"}) "<<" ">>")
-  )
+  (adjust-subst-map (->subst-map {:a 1 :b "two"}) "<<" ">>"))
+  
 
 (defn copy-template-dir
   "Given a template directory, a target directory, a tuple
@@ -208,8 +207,8 @@
            "io.github.seancorfield/deps-new%org.corfield.new/app#v0.7.0"]]
     (let [[_ repo _ root _ path _ tag]
           (re-find #"^(.+?)(%(.+?))?(%(.+?))?(#(.+?))?$" (str t))]
-      [repo (and path root) (or path root repo) tag]))
-  )
+      [repo (and path root) (or path root repo) tag])))
+  
 
 (defn preprocess-options
   "Given the raw options hash map, preprocess, parse, and
@@ -289,5 +288,5 @@
   (substitute "{{foo/file}}.clj"
               (->subst-map {:top/ns "org.corfield"
                             :foo    "org.corfield-ns"
-                            :bar    "org/corfield_file"}))
-  )
+                            :bar    "org/corfield_file"})))
+  
